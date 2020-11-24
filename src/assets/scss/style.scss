@@ -241,7 +241,7 @@ body {
 }
 
 .info__product__info {
-  width: 400px;
+  width: 401px;
   @include mq-down(lg) {
     max-width: 350px;
   }
@@ -257,7 +257,7 @@ body {
 }
 
 .info__product__cv-button {
-  width: 400px;
+  width: 401px;
   @include mq-down(lg) {
     width: 350px;
   }
@@ -558,8 +558,8 @@ body {
 
     .cv__left {
       order: 1;
-      flex: 0 0 400px;
-      width: 400px;
+      flex: 0 0 401px;
+      width: 401px;
       margin-right: 48px;
       @include mq-down(lg) {
         flex: 0 0 360px;

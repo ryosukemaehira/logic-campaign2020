@@ -703,7 +703,7 @@ body {
           line-height: 18.5px; } }
 
 .info__product__info {
-  width: 400px;
+  width: 401px;
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
   @media screen and (max-width: 1280px) {
@@ -720,7 +720,7 @@ body {
       padding-right: 20px; } }
 
 .info__product__cv-button {
-  width: 400px;
+  width: 401px;
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
   @media screen and (max-width: 1280px) {
@@ -993,8 +993,8 @@ body {
         padding-right: 18px; } }
     .section__cv .cv__flex-container .cv__left {
       order: 1;
-      flex: 0 0 400px;
-      width: 400px;
+      flex: 0 0 401px;
+      width: 401px;
       margin-right: 48px;
       /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
       /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
