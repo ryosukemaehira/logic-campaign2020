@@ -12,7 +12,7 @@
 <body>
 	@@include('./shared/_header.html', {"asset_path": "./assets"})
 	<section class="section-hero">
-		<div class="l-container">
+		<div class="l-liquid-container">
 		  <div class="hero__content">
 				<div class="hero__content__visual js-animation-parent--top-section animation--box-slidein">
 					<div class="hide-sm">
@@ -96,6 +96,9 @@
 					</h1>
 					<div class="info__product__info">
 						@@include('./shared/_c-product-info.html', {"asset_path": "./assets"})
+					</div>
+					<div class="info__product__cv-button">
+						@@include('./shared/_c-cv-button.html', {"asset_path": "./assets"})
 					</div>
 				</div>
 				<p class="info__product__bottom-text">
@@ -231,6 +234,9 @@
 					</h1>
 					<div class="cv__product-info">
 						@@include('./shared/_c-product-info.html', {"asset_path": "./assets"})
+					</div>
+					<div class="cv__cv-button">
+						@@include('./shared/_c-cv-button.html', {"asset_path": "./assets"})
 					</div>
 				</div>
 			</div>

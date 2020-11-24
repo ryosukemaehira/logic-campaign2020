@@ -7,16 +7,17 @@
 @import "./modules/_header.scss";
 @import "./modules/_footer.scss";
 @import "./modules/_c-product-info.scss";
+@import "./modules/_c-cv-button.scss";
 @import "./modules/_animation.scss";
 
 
 .u-font-size--desc {
-  font-size: 23px;
+  font-size: 2.3rem;
   line-height: 45px;
   font-weight: bold;
 
   @include mq-down(sm) {
-    font-size: 13.5px;
+    font-size: 1.35rem;
     line-height: 25px;
   }
 }
@@ -44,15 +45,19 @@ body {
 
     .hero__content__title {
       position: absolute;
-      bottom: 165px;
+      bottom: 11.4vw;
       right: 0;
       left: 0;
       margin: auto;
-      width: 1032px;
+      width: 71.66vw;
       img {
         width: 100%;
         vertical-align: bottom;
       }
+      // @include mq-up(xl) {
+      //   width: 1032px;
+      //   bottom: 165px;
+      // }
       @include mq-down(sm) {
         right: -22px;
         left: -22px;
@@ -62,10 +67,13 @@ body {
         transform: translateY(-50%);
       }
       .hero__content__title__image {
-        width: 1032px;
+        width: 71.66vw;
         @include mq-down(sm) {
           width: calc(100vw - 20px);
         }
+        // @include mq-up(xl) {
+        //   width: 1032px;
+        // }
       }
     }
 
@@ -78,6 +86,9 @@ body {
         width: 100%;
         vertical-align: bottom;
       }
+      @include mq-down(lg) {
+        width: 6.796vw;
+      }
       @include mq-down(sm) {
         top: -48px;
         right: -17px;
@@ -85,6 +96,9 @@ body {
       }
       .hero__content__tategaki__image {
         width: 87px;
+        @include mq-down(lg) {
+          width: 6.796vw;
+        }
         @include mq-down(sm) {
           width: 11.73vw;
         }
@@ -116,10 +130,10 @@ body {
     margin-bottom: 60px;
     margin-top: -15px;
     line-height: 87px;
-    font-size: 57px;
+    font-size: 5.7rem;
     font-weight: bold;
     @include mq-down(sm) {
-      font-size: 20px;
+      font-size: 2.0rem;
       line-height: 37.5px;
       margin-top: 0;
       margin-bottom: 28px;
@@ -142,27 +156,28 @@ body {
   }
   .info__title__en {
     @extend .latin-fonts-main;
-    font-size: 90px;
+    font-size: 9.0rem;
     line-height: 115px;
     @include mq-down(sm) {
-      font-size: 27.5px;
+      font-size: 2.75rem;
       line-height: 35px;
     }
     .underline {
-      display: inline-block;
-      line-height: 100px;
-      box-shadow: inset 0px -4px 0px #000;
+      display: inline;
+      padding-bottom: 0;
+      line-height: 1.05;
+      background: linear-gradient(transparent 97%, #000 0%);
       @include mq-down(sm) {
-        line-height: 32px;
-        box-shadow: inset 0px -1.25px 0px #000;
+        padding-bottom: 0.02em;
+        background: linear-gradient(transparent 95%, #000 0%);
       }
     }
   }
   .info__title__jp {
-    font-size: 60px;
+    font-size: 6.0rem;
     letter-spacing: 0.08em;
     @include mq-down(sm) {
-      font-size: 20px;
+      font-size: 2.0rem;
       margin-top: 4px;
     }
   }
@@ -178,17 +193,23 @@ body {
   top: 0;
   width: 100%;
   padding-left: 70px;
+  @include mq-down(lg) {
+    position: relative;
+    padding-left: 0;
+    margin-top: calc(-100vw + 560px);
+  }
 
   @include mq-down(sm) {
     position: relative;
     padding-left: 0;
+    margin-top: 0;
   }
 }
 
 .info__product__title {
   margin-bottom: 22px;
   @include mq-down(sm) {
-    margin-top: -50px;
+    margin-top: -56px;
     line-height: 1;
   }
   .info__product__title__line {
@@ -202,17 +223,17 @@ body {
     }
     &.info__product__title__line--1 {
       margin-bottom: 6px;
-      font-size: 41px;
+      font-size: 4.1rem;
       letter-spacing: 0.11em;
       @include mq-down(sm) {
-        font-size: 18.75px;
+        font-size: 1.875rem;
       }
     }
     &.info__product__title__line--2 {
-      font-size: 28px;
+      font-size: 2.8rem;
       letter-spacing: 0.09em;
       @include mq-down(sm) {
-        font-size: 14px;
+        font-size: 1.4rem;
         line-height: 18.5px;
       }
     }
@@ -220,18 +241,40 @@ body {
 }
 
 .info__product__info {
+  width: 400px;
+  @include mq-down(lg) {
+    max-width: 350px;
+  }
   @include mq-down(sm) {
-    padding-left: 34px;
-    padding-right: 34px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.info__product__cv-button {
+  width: 400px;
+  @include mq-down(lg) {
+    width: 350px;
+  }
+  @include mq-down(sm) {
+    width: auto;
   }
 }
 
 .info__product__visual {
   position: relative;
-  width: calc(750 / 1440 * 100vw);
+  width: calc(100vw - 690px);
   max-width: 750px;
   margin-left: auto;
   margin-right: -30px;
+  @include mq-down(lg) {
+    width: calc(100vw - 560px);
+  }
   @include mq-down(sm) {
     width: 100%;
     margin-right: 0;
@@ -255,6 +298,9 @@ body {
   @extend .u-font-size--desc;
   font-weight: bold;
   margin-top: -2.2em;
+  @include mq-down(lg) {
+    margin-top: 60px;
+  }
   @include mq-down(sm) {
     margin-top: 64px;
   }
@@ -266,11 +312,11 @@ body {
     margin-top: 24px;
   }
   .about__title {
-    font-size: 60px;
+    font-size: 6.0rem;
     line-height: 90px;
     text-align: center;
     @include mq-down(sm) {
-      font-size: 20px;
+      font-size: 2.0rem;
       line-height: 37.5px;
     }
   }
@@ -278,7 +324,7 @@ body {
     margin-top: 45px;
     padding-left: 135px;
     padding-right: 135px;
-    @include mq-down(sm) {
+    @include mq-down(lg) {
       padding-left: 0px;
       padding-right: 0px;
     }
@@ -293,7 +339,7 @@ body {
     margin-left: 135px;
     margin-right: 135px;
     background-color: #fff;
-    @include mq-down(sm) {
+    @include mq-down(lg) {
       margin-top: 72px;
       margin-left: 0px;
       margin-right: 0px;
@@ -305,19 +351,19 @@ body {
       padding: 2px 16px 22px;
     }
     h2 {
-      font-size: 18px;
+      font-size: 1.8rem;
       margin-bottom: 16px;
       margin-top: 40px;
       @include mq-down(sm) {
-        font-size: 13px;
+        font-size: 1.3rem;
         margin-top: 20px;
       }
     }
     h3 {
-      font-size: 14px;
+      font-size: 1.4rem;
       margin-bottom: 1em;
       @include mq-down(sm) {
-        font-size: 12px;
+        font-size: 1.2rem;
       }
       .underline {
         display: inline-block;
@@ -331,7 +377,7 @@ body {
       position: relative;
       align-items: flex-start;
       @include mq-down(sm) {
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: 1.875;
       }
 
@@ -379,6 +425,10 @@ body {
     padding-left: 70px;
     padding-right: 70px;
     display: flex;
+    @include mq-down(lg) {
+      padding-left: 0;
+      padding-right: 0;
+    }
     @include mq-down(sm) {
       display: block;
       padding-left: 18px;
@@ -402,18 +452,18 @@ body {
         }
         &.logic {
           font-family: "TT";
-          font-size: 80px;
+          font-size: 8.0rem;
           letter-spacing: 0.04em;
           @include mq-down(sm) {
-            font-size: 35px;
+            font-size: 3.5rem;
           }
         }
 
         &.kogane {
-          font-size: 75px;
+          font-size: 7.5rem;
           letter-spacing: 0.08em;
           @include mq-down(sm) {
-            font-size: 33px;
+            font-size: 3.3rem;
             margin-top: 37px;
           }
         }
@@ -444,14 +494,14 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 28px;
+        font-size: 2.8rem;
         font-weight: bold;
         text-decoration: none;
         @include mq-down(sm) {
           width: 188px;
           height: 46px;
           margin-top: 22px;
-          font-size: 16.5px;
+          font-size: 1.65rem;
         }
       }
     }
@@ -465,12 +515,12 @@ body {
       margin-top: 75px;
     }
     .aboutus__message__title {
-      font-size: 35px;
+      font-size: 3.5rem;
       line-height: 45px;
       margin-bottom: 50px;
       @include mq-down(sm) {
         margin-bottom: 27px;
-        font-size: 20px;
+        font-size: 2.0rem;
         line-height: 22.5px;
       }
       .underline {
@@ -496,6 +546,10 @@ body {
     display: flex;
     padding-left: 115px;
     padding-right: 115px;
+    @include mq-down(lg) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
     @include mq-down(sm) {
       display: block;
       padding-left: 18px;
@@ -507,7 +561,12 @@ body {
       flex: 0 0 400px;
       width: 400px;
       margin-right: 48px;
+      @include mq-down(lg) {
+        flex: 0 0 360px;
+        width: 360px;
+      }
       @include mq-down(sm) {
+        flex-basis: auto;
         margin-right: 0;
         width: auto;
       }
@@ -516,6 +575,13 @@ body {
     .cv__right {
       flex: 1 1 auto;
       order: 2;
+      @include mq-down(lg) {
+        flex: 0 0 50%;
+        width: 50%;
+      }
+      @include mq-down(sm) {
+        width: auto;
+      }
     }
 
     .cv__title {
@@ -523,11 +589,11 @@ body {
       margin-top: -18px;
       margin-bottom: 28px;
       white-space: nowrap;
-      font-size: 35.8px;
+      font-size: 3.58rem;
       line-height: 52px;
       @include mq-down(sm) {
         margin-top: 18px;
-        font-size: 21.6px;
+        font-size: 2.16rem;
         line-height: 34.5px;
         text-align: center;
       }
@@ -560,9 +626,20 @@ body {
     }
 
     .cv__product-info {
+      
       @include mq-down(sm) {
-        padding-left: 18px;
-        padding-right: 18px;
+        max-width: 242px;
+        margin: 0 auto;
+        // padding-left: 18px;
+        // padding-right: 18px;
+      }
+    }
+
+    .cv__cv-button {
+      @include mq-down(sm) {
+        margin-left: -18px;
+        margin-right: -18px;
+        width: calc(100% + 36px);
       }
     }
   }

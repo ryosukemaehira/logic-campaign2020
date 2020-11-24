@@ -1,0 +1,23 @@
+.c-cv-button {
+  margin-top: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 86px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 10px;
+  font-size: 3.8rem;
+  letter-spacing: 0.08em;
+  @include mq-down(sm) {
+    margin-top: 35px;
+    height: 75px;
+    font-size: 2.5rem;
+    border-radius: 5px;
+  }
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

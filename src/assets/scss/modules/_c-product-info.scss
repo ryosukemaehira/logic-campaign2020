@@ -1,10 +1,13 @@
+.c-product-info {
+}
+
 .c-product-info__period {
-  font-size: 29px;
+  font-size: 2.9rem;
   line-height: 1;
   white-space: nowrap;
   font-weight: bold;
   @include mq-down(sm) {
-    font-size: 17.85px;
+    font-size: 1.785rem;
   }
 }
 
@@ -19,95 +22,62 @@
   }
 
   .label {
-    font-size: 28px;
+    font-size: 2.8rem;
     font-weight: bold;
     letter-spacing: 0.09em;
     margin-right: 0.2em;
     @include mq-down(sm) {
-      font-size: 17.25px;
+      font-size: 1.725rem;
     }
   }
   .yen {
-    font-size: 55px;
+    font-size: 5.5rem;
     font-weight: bold;
     transform: translateY(0.014em);
     @include mq-down(sm) {
-      font-size: 30px;
+      font-size: 3.0rem;
     }
   }
   .num {
     @extend .latin-fonts-main;
-    font-size: 55px;
+    font-size: 5.5rem;
     letter-spacing: 0.02em;
     margin-right: 0.05em;
     @include mq-down(sm) {
-      font-size: 30px;
+      font-size: 3.0rem;
     }
   }
 
   .tax {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: bold;
     @include mq-down(sm) {
-      font-size: 12px;
+      font-size: 1.2rem;
     }
   }
 }
 
 .c-product-info__note {
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 25px;
   font-weight: bold;
   @include mq-down(sm) {
     margin-top: 6px;
-    font-size: 10px;
+    font-size: 1.0rem;
     transform: scale(0.9);
     transform-origin: left;
   }
 }
 
-.c-product-info__box-content {
+.c-product-info__sokyu {
   margin-top: 15px;
-  width: 401px;
+  width: 100%;
   @include mq-down(sm) {
-    width: 100%;
     margin-top: 18px;
   }
-  .c-product-info__sokyu {
-    @include mq-down(sm) {
-      width: 242px;
-    }
-    img {
-      width: 100%;
-      vertical-align: bottom;
-    }
-  }
-}
-
-.c-product-info__buy-button {
-  margin-top: 45px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 86px;
-  color: #fff;
-  background-color: #000;
-  border-radius: 10px;
-  font-size: 38px;
-  letter-spacing: 0.08em;
-  @include mq-down(sm) {
-    width: calc(100% + 68px);
-    margin-top: 35px;
-    height: 75px;
-    font-size: 25px;
-    border-radius: 5px;
-    margin-left: -34px;
-    margin-right: -34px;
-  }
-  a {
-    text-decoration: none;
-    font-weight: bold;
+  img {
+    width: 100%;
+    vertical-align: bottom;
   }
 }

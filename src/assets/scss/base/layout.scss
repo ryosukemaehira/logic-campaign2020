@@ -104,12 +104,12 @@ $map-breakpoint-down: (
 .l-liquid-container {
   width: 100%;
   position: relative;
-  padding-left: 84px;
-  padding-right: 84px;
+  padding-left: 90px;
+  padding-right: 90px;
   
   @include mq-down(md) {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 .l-flex-box {
