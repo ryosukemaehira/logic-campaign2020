@@ -1,0 +1,37 @@
+// Set variables for values≥
+
+// Change depending on design the systems.
+$btn-width: 300px;
+
+$animation-duration: 0.2s;
+
+
+//テキストカラー
+$text-color-main: #000;
+$text-color-black: #000;
+
+$bg-color-bright-gray: #F1F2F4;
+$bg-color-dark-gray: #767F87;
+
+
+$logic-beige: #f9f0e8;
+$logic-brown: #997161;
+
+
+//レイアウト系
+/* ブレイクポイントと連動している container の幅になる。 */
+$contents-width-xs: 400px;
+$contents-width-sm: 768px;
+$contents-width-md: 920px;
+$contents-width-lg: 1280px;
+$contents-width-xl: 1440px;
+
+$breakpoint-xs-up: $contents-width-xs + 1;
+$breakpoint-sm-up: $contents-width-sm + 1;
+$breakpoint-md-up: $contents-width-md + 1;
+$breakpoint-lg-up: $contents-width-lg + 1;
+$breakpoint-xl-up: $contents-width-xl + 1;
+
+/* containerにデフォルトで入っているpaddingを設定 */
+$container-padding: 15px;
+$container-padding-sp: 20px;

@@ -1,0 +1,20 @@
+.header {
+  height: 133px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq-down(sm) {
+    height: 77px;
+  }
+
+  .header__logo {
+    width: 395px;
+    @include mq-down(sm) {
+      width: 179px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+}

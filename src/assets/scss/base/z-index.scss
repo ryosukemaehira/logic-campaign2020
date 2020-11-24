@@ -1,0 +1,8 @@
+$zmaps: (
+  main,
+  header,
+);
+
+@function z($name) {
+  @return index($zmaps, $name)
+};

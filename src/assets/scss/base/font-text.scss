@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "TT";
+  src: url('../fonts/TTNorms-Bold.ttf') format('truetype'),
+       url('../fonts/TTNorms-Bold.woff') format('woff');
+}
+
+html {
+  font-size: 62.5%;
+  @include mq-down(sm) {
+    font-size: 50%;
+  }
+}
+
+
+body {
+  @extend .jp-fonts-main;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+  color: $text-color-main;
+
+  -webkit-font-smoothing: antialiased; //  setting for font rendering
+  -moz-osx-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-feature-settings: "palt" 1;
+
+  @media only screen and(-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  font-variant-ligatures: no-common-ligatures; // disable regature setting globally or make a class if you don't need ligature.
+}
+
+// white css depending on your 
+
+a {
+  color: inherit;
+}
+
+p {
+  //text-align: justify; // align on the both edge of paragraphs
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {font-size: 3.2rem;}
+h2 {font-size: 2.8rem;}
+h3 {font-size: 2.4rem;}
+h4 {font-size: 2rem;}
+h5 {font-size: 1.6rem;}
+
+// utility for text style
+
+@mixin responsive-font-sizing($base-size:24) {
+  font-size: calc( ( #{$base-size}px * 3 / 5 ) + ( #{$base-size} * 2 / 5 / 1368 * 100vw));
+}
+
+.jp-fonts-main {
+  font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.latin-fonts-main { 
+  font-family: 'TT', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+}
+
+.kern-wide { 
+  letter-spacing: 0.12em;
+}
+
+.has-text-palt {
+  letter-spacing: 0.12em;
+  font-feature-settings: 'palt' on;
+}
+
+.has-description-text {
+  @include responsive-font-sizing(15);
+  line-height: 180%;
+  @include mq-down(sm) {
+    font-size: 13px;
+  }
+}
+
+.has-text-black {
+  color: $text-color-black;
+}
+
+.has-text-white {
+  color: $text-color-main;
+}
+
+.has-text-center {
+  text-align: center;
+}
+
+.has-text-right {
+  text-align: right;
+} 
+
+::selection {
+  background: #ccc; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ccc; /* Gecko Browsers */
+}

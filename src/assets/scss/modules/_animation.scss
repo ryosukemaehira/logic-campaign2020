@@ -1,0 +1,58 @@
+.animation--box-slidein {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10%;
+    bottom: 0;
+    left: -10%;
+    z-index: 2;
+    background-color: $logic-beige;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    transition-duration: 1.2s;
+    transition-timing-function: cubic-bezier(.075,.82,.165,1);
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    transition-delay: 0.4s;
+  }
+
+  &.js-animation-fire {
+    &:before {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+    }
+  }
+}
+
+.animation--delay-01 {
+  transition-delay: 0.8s;
+}
+
+.animation--delay-02 {
+  transition-delay: 1.2s;
+}
+
+.animation--slidein {
+  position: relative;
+  .animation--slidein__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    transition-duration: 0.6s;
+    transition-delay: 0.8s;
+  }
+  &.js-animation-fire {
+    .animation--slidein__inner {
+      width: 100%;
+    }
+  }
+}

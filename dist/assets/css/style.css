@@ -1,0 +1,996 @@
+@charset "UTF-8";
+/* ブレイクポイントと連動している container の幅になる。 */
+/* containerにデフォルトで入っているpaddingを設定 */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1.5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE, Edge 対応 */
+  scrollbar-width: none;
+  /* Firefox 対応 */ }
+
+body::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none; }
+
+*, *:before, *:after {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.l-wrapper {
+  overflow: hidden; }
+
+.l-container {
+  margin: 0 auto;
+  position: relative;
+  padding-left: 90px;
+  padding-right: 90px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  .l-container.is-lg-width {
+    max-width: 1280px; }
+  .l-container.is-md-width {
+    max-width: 920px; }
+  .l-container.is-sm-width {
+    max-width: 768px; }
+  .l-container.is-xs-width {
+    max-width: 400px; }
+  @media screen and (max-width: 400px) {
+    .l-container {
+      width: 100%; } }
+  @media screen and (max-width: 768px) {
+    .l-container {
+      width: 100%;
+      padding-left: 32px;
+      padding-right: 32px; } }
+  @media screen and (min-width: 401px) {
+    .l-container {
+      width: 100%; } }
+  @media screen and (min-width: 1441px) {
+    .l-container {
+      width: 1440px; } }
+  .l-container.has-padding {
+    padding: 0 15px;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .l-container.has-padding {
+        padding: 0 20px; } }
+
+.l-liquid-container {
+  width: 100%;
+  position: relative;
+  padding-left: 84px;
+  padding-right: 84px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 920px) {
+    .l-liquid-container {
+      padding-left: 16px;
+      padding-right: 16px; } }
+
+.l-flex-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+  .l-flex-box.is-direction-column {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .l-flex-box.is-align-center {
+    align-items: center; }
+  .l-flex-box.is-align-start {
+    align-items: flex-start; }
+  .l-flex-box.is-flex-wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .l-flex-box.is-justify-center {
+    -webkit-justify-content: center;
+    justify-content: center; }
+  .l-flex-box.is-justify-space-between {
+    -webkit-justify-content: space-between;
+    justify-content: space-between; }
+  .l-flex-box.l-block-sm {
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .l-flex-box.l-block-sm {
+        display: block; } }
+
+.show-sm {
+  display: none !important; }
+
+.hide-sm {
+  display: block !important; }
+
+/* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+@media screen and (max-width: 768px) {
+  .show-sm {
+    display: block !important; }
+
+  .hide-sm {
+    display: none !important; } }
+.u-relative {
+  position: relative; }
+
+@font-face {
+  font-family: "TT";
+  src: url("../fonts/TTNorms-Bold.ttf") format("truetype"), url("../fonts/TTNorms-Bold.woff") format("woff"); }
+html {
+  font-size: 62.5%;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-feature-settings: "palt" 1;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  font-variant-ligatures: no-common-ligatures; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; } }
+
+a {
+  color: inherit; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
+h1 {
+  font-size: 3.2rem; }
+
+h2 {
+  font-size: 2.8rem; }
+
+h3 {
+  font-size: 2.4rem; }
+
+h4 {
+  font-size: 2rem; }
+
+h5 {
+  font-size: 1.6rem; }
+
+.jp-fonts-main, body {
+  font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+.latin-fonts-main, .c-product-info__price .num, .info__title .info__title__en, .section__cv .cv__flex-container .cv__title {
+  font-family: 'TT', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.04em; }
+
+.kern-wide {
+  letter-spacing: 0.12em; }
+
+.has-text-palt {
+  letter-spacing: 0.12em;
+  font-feature-settings: 'palt' on; }
+
+.has-description-text {
+  font-size: calc( ( 15px * 3 / 5 ) + ( 15 * 2 / 5 / 1368 * 100vw));
+  line-height: 180%;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .has-description-text {
+      font-size: 13px; } }
+
+.has-text-black {
+  color: #000; }
+
+.has-text-white {
+  color: #000; }
+
+.has-text-center {
+  text-align: center; }
+
+.has-text-right {
+  text-align: right; }
+
+::selection {
+  background: #ccc;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #ccc;
+  /* Gecko Browsers */ }
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 100%; }
+
+.ele-button-medium {
+  display: inline-block;
+  height: 72px;
+  width: 100%;
+  background-color: #000;
+  font-weight: bold;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .ele-button-medium {
+      height: 64px; } }
+
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer; }
+
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none; }
+
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px; }
+
+input:focus {
+  outline-style: none; }
+
+.header {
+  height: 133px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .header {
+      height: 77px; } }
+  .header .header__logo {
+    width: 395px;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .header .header__logo {
+        width: 179px; } }
+    .header .header__logo img {
+      width: 100%; }
+
+.footer {
+  padding-top: 175px;
+  padding-bottom: 55px;
+  text-align: center; }
+  .footer .footer__logic-link {
+    width: 448px;
+    height: 86px;
+    border: 2px solid #000;
+    display: flex;
+    margin: 0 auto 185px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.12em;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .footer .footer__logic-link {
+        width: 100%;
+        height: 60px;
+        font-size: 17.5px; } }
+  .footer .footer__copyright {
+    font-size: 14px; }
+
+.c-product-info__period {
+  font-size: 29px;
+  line-height: 1;
+  white-space: nowrap;
+  font-weight: bold;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .c-product-info__period {
+      font-size: 17.85px; } }
+
+.c-product-info__price {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 12px; }
+  .c-product-info__price * {
+    white-space: nowrap; }
+  .c-product-info__price .label {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.09em;
+    margin-right: 0.2em;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .c-product-info__price .label {
+        font-size: 17.25px; } }
+  .c-product-info__price .yen {
+    font-size: 55px;
+    font-weight: bold;
+    transform: translateY(0.014em);
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .c-product-info__price .yen {
+        font-size: 30px; } }
+  .c-product-info__price .num {
+    font-size: 55px;
+    letter-spacing: 0.02em;
+    margin-right: 0.05em;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .c-product-info__price .num {
+        font-size: 30px; } }
+  .c-product-info__price .tax {
+    font-size: 14px;
+    font-weight: bold;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .c-product-info__price .tax {
+        font-size: 12px; } }
+
+.c-product-info__note {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: bold;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .c-product-info__note {
+      margin-top: 6px;
+      font-size: 10px;
+      transform: scale(0.9);
+      transform-origin: left; } }
+
+.c-product-info__box-content {
+  margin-top: 15px;
+  width: 401px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .c-product-info__box-content {
+      width: 100%;
+      margin-top: 18px; } }
+  .c-product-info__box-content .c-product-info__sokyu {
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .c-product-info__box-content .c-product-info__sokyu {
+        width: 242px; } }
+    .c-product-info__box-content .c-product-info__sokyu img {
+      width: 100%;
+      vertical-align: bottom; }
+
+.c-product-info__buy-button {
+  margin-top: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 86px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 10px;
+  font-size: 38px;
+  letter-spacing: 0.08em;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .c-product-info__buy-button {
+      width: calc(100% + 68px);
+      margin-top: 35px;
+      height: 75px;
+      font-size: 25px;
+      border-radius: 5px;
+      margin-left: -34px;
+      margin-right: -34px; } }
+  .c-product-info__buy-button a {
+    text-decoration: none;
+    font-weight: bold; }
+
+.animation--box-slidein {
+  position: relative; }
+  .animation--box-slidein:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10%;
+    bottom: 0;
+    left: -10%;
+    z-index: 2;
+    background-color: #f9f0e8;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    transition-duration: 1.2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    transition-delay: 0.4s; }
+  .animation--box-slidein.js-animation-fire:before {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0); }
+
+.animation--delay-01 {
+  transition-delay: 0.8s; }
+
+.animation--delay-02 {
+  transition-delay: 1.2s; }
+
+.animation--slidein {
+  position: relative; }
+  .animation--slidein .animation--slidein__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    transition-duration: 0.6s;
+    transition-delay: 0.8s; }
+  .animation--slidein.js-animation-fire .animation--slidein__inner {
+    width: 100%; }
+
+.u-font-size--desc, .section-greeting .greeting__desc, .info__product__bottom-text, .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__desc, .section-aboutus .aboutus__message .aboutus__message__desc {
+  font-size: 23px;
+  line-height: 45px;
+  font-weight: bold;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .u-font-size--desc, .section-greeting .greeting__desc, .info__product__bottom-text, .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__desc, .section-aboutus .aboutus__message .aboutus__message__desc {
+      font-size: 13.5px;
+      line-height: 25px; } }
+
+body {
+  background-color: #f9f0e8; }
+
+.section-hero .hero__content {
+  position: relative;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  .section-hero .hero__content:before {
+    display: block;
+    content: '';
+    padding-top: 48.5714%;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section-hero .hero__content:before {
+        padding-top: 180.3858%; } }
+  .section-hero .hero__content .hero__content__title {
+    position: absolute;
+    bottom: 165px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 1032px;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    .section-hero .hero__content .hero__content__title img {
+      width: 100%;
+      vertical-align: bottom; }
+    @media screen and (max-width: 768px) {
+      .section-hero .hero__content .hero__content__title {
+        right: -22px;
+        left: -22px;
+        width: auto;
+        top: 50%;
+        bottom: calc(100vw - 20px);
+        transform: translateY(-50%); } }
+    .section-hero .hero__content .hero__content__title .hero__content__title__image {
+      width: 1032px;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .section-hero .hero__content .hero__content__title .hero__content__title__image {
+          width: calc(100vw - 20px); } }
+  .section-hero .hero__content .hero__content__tategaki {
+    position: absolute;
+    right: 52px;
+    top: -35px;
+    width: 87px;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    .section-hero .hero__content .hero__content__tategaki img {
+      width: 100%;
+      vertical-align: bottom; }
+    @media screen and (max-width: 768px) {
+      .section-hero .hero__content .hero__content__tategaki {
+        top: -48px;
+        right: -17px;
+        width: 11.73vw; } }
+    .section-hero .hero__content .hero__content__tategaki .hero__content__tategaki__image {
+      width: 87px;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .section-hero .hero__content .hero__content__tategaki .hero__content__tategaki__image {
+          width: 11.73vw; } }
+  .section-hero .hero__content .hero__content__visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; }
+    .section-hero .hero__content .hero__content__visual img {
+      width: 100%;
+      vertical-align: bottom; }
+
+.section-greeting {
+  margin-top: 240px;
+  text-align: center;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .section-greeting {
+      margin-top: 80px; } }
+  .section-greeting .greeting__title {
+    margin-bottom: 60px;
+    margin-top: -15px;
+    line-height: 87px;
+    font-size: 57px;
+    font-weight: bold;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section-greeting .greeting__title {
+        font-size: 20px;
+        line-height: 37.5px;
+        margin-top: 0;
+        margin-bottom: 28px; } }
+  .section-greeting .greeting__desc {
+    font-weight: bold; }
+
+.info__title {
+  margin-top: 150px;
+  text-align: center;
+  margin-bottom: 50px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .info__title {
+      margin-top: 80px;
+      margin-bottom: 14px; } }
+  .info__title .info__title__en {
+    font-size: 90px;
+    line-height: 115px;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .info__title .info__title__en {
+        font-size: 27.5px;
+        line-height: 35px; } }
+    .info__title .info__title__en .underline {
+      display: inline-block;
+      line-height: 100px;
+      box-shadow: inset 0px -4px 0px #000;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .info__title .info__title__en .underline {
+          line-height: 32px;
+          box-shadow: inset 0px -1.25px 0px #000; } }
+  .info__title .info__title__jp {
+    font-size: 60px;
+    letter-spacing: 0.08em;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .info__title .info__title__jp {
+        font-size: 20px;
+        margin-top: 4px; } }
+
+.info__product {
+  position: relative; }
+
+.info__product__text-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-left: 70px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .info__product__text-container {
+      position: relative;
+      padding-left: 0; } }
+
+.info__product__title {
+  margin-bottom: 22px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .info__product__title {
+      margin-top: -50px;
+      line-height: 1; } }
+  .info__product__title .info__product__title__line {
+    display: inline-block;
+    background-color: #997161;
+    color: #fff;
+    padding: 11px 16px;
+    line-height: 1;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .info__product__title .info__product__title__line {
+        padding: 5.5px 7.5px; } }
+    .info__product__title .info__product__title__line.info__product__title__line--1 {
+      margin-bottom: 6px;
+      font-size: 41px;
+      letter-spacing: 0.11em;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .info__product__title .info__product__title__line.info__product__title__line--1 {
+          font-size: 18.75px; } }
+    .info__product__title .info__product__title__line.info__product__title__line--2 {
+      font-size: 28px;
+      letter-spacing: 0.09em;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .info__product__title .info__product__title__line.info__product__title__line--2 {
+          font-size: 14px;
+          line-height: 18.5px; } }
+
+.info__product__info {
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .info__product__info {
+      padding-left: 34px;
+      padding-right: 34px; } }
+
+.info__product__visual {
+  position: relative;
+  width: calc(750 / 1440 * 100vw);
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: -30px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .info__product__visual {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  .info__product__visual img {
+    width: 100%;
+    vertical-align: bottom; }
+  .info__product__visual .info__product__visual__bagde {
+    position: absolute;
+    top: 2.9333%;
+    right: 2.9333%;
+    width: 28.53%; }
+
+.info__product__bottom-text {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  margin-top: -2.2em;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .info__product__bottom-text {
+      margin-top: 64px; } }
+
+.section-about {
+  margin-top: 80px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .section-about {
+      margin-top: 24px; } }
+  .section-about .about__title {
+    font-size: 60px;
+    line-height: 90px;
+    text-align: center;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section-about .about__title {
+        font-size: 20px;
+        line-height: 37.5px; } }
+  .section-about .about__flow {
+    margin-top: 45px;
+    padding-left: 135px;
+    padding-right: 135px;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section-about .about__flow {
+        padding-left: 0px;
+        padding-right: 0px; } }
+    .section-about .about__flow img {
+      width: 100%;
+      vertical-align: bottom; }
+  .section-about .about__box {
+    margin-top: 150px;
+    margin-left: 135px;
+    margin-right: 135px;
+    background-color: #fff;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section-about .about__box {
+        margin-top: 72px;
+        margin-left: 0px;
+        margin-right: 0px; } }
+  .section-about .about__box__text {
+    padding: 35px 80px 80px;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section-about .about__box__text {
+        padding: 2px 16px 22px; } }
+    .section-about .about__box__text h2 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      margin-top: 40px;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .section-about .about__box__text h2 {
+          font-size: 13px;
+          margin-top: 20px; } }
+    .section-about .about__box__text h3 {
+      font-size: 14px;
+      margin-bottom: 1em;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .section-about .about__box__text h3 {
+          font-size: 12px; } }
+      .section-about .about__box__text h3 .underline {
+        display: inline-block;
+        line-height: 2em;
+        box-shadow: inset 0px -1px 0px #000; }
+    .section-about .about__box__text ul > li {
+      line-height: 2.15;
+      position: relative;
+      align-items: flex-start;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .section-about .about__box__text ul > li {
+          font-size: 12px;
+          line-height: 1.875; } }
+      .section-about .about__box__text ul > li.dot {
+        margin-left: 1em; }
+        .section-about .about__box__text ul > li.dot:before {
+          display: block;
+          content: '・';
+          position: absolute;
+          top: 0;
+          left: -1em; }
+      .section-about .about__box__text ul > li.kome {
+        margin-left: 1em; }
+        .section-about .about__box__text ul > li.kome:before {
+          display: block;
+          content: '※';
+          position: absolute;
+          top: 0;
+          left: -1em; }
+        .section-about .about__box__text ul > li.kome .underline {
+          background: linear-gradient(#fff 95%, #000 0%);
+          padding-bottom: 6px;
+          display: inline; }
+
+.section-aboutus {
+  padding-top: 136px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .section-aboutus {
+      padding-top: 70px; } }
+  .section-aboutus .aboutus__orgs {
+    padding-left: 70px;
+    padding-right: 70px;
+    display: flex;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section-aboutus .aboutus__orgs {
+        display: block;
+        padding-left: 18px;
+        padding-right: 18px; } }
+    .section-aboutus .aboutus__orgs .aboutus__orgs__item {
+      flex: 1 1 50%; }
+      .section-aboutus .aboutus__orgs .aboutus__orgs__item:not(:first-child) {
+        margin-left: 66px;
+        /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+        @media screen and (max-width: 768px) {
+          .section-aboutus .aboutus__orgs .aboutus__orgs__item:not(:first-child) {
+            margin-left: 0; } }
+      .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__title {
+        text-align: center;
+        line-height: 80px;
+        margin-bottom: 60px;
+        /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+        @media screen and (max-width: 768px) {
+          .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__title {
+            margin-bottom: 5px; } }
+        .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__title.logic {
+          font-family: "TT";
+          font-size: 80px;
+          letter-spacing: 0.04em;
+          /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+          @media screen and (max-width: 768px) {
+            .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__title.logic {
+              font-size: 35px; } }
+        .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__title.kogane {
+          font-size: 75px;
+          letter-spacing: 0.08em;
+          /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+          @media screen and (max-width: 768px) {
+            .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__title.kogane {
+              font-size: 33px;
+              margin-top: 37px; } }
+      .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__visual img {
+        width: 100%;
+        vertical-align: bottom; }
+      .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__desc {
+        margin-top: 59px;
+        text-align: justify;
+        /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+        @media screen and (max-width: 768px) {
+          .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__desc {
+            margin-top: 20px;
+            letter-spacing: 0.03em; } }
+      .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__link {
+        margin: 55px auto 0;
+        width: 305px;
+        height: 65px;
+        border: 2px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: bold;
+        text-decoration: none;
+        /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+        @media screen and (max-width: 768px) {
+          .section-aboutus .aboutus__orgs .aboutus__orgs__item .aboutus__orgs__item__link {
+            width: 188px;
+            height: 46px;
+            margin-top: 22px;
+            font-size: 16.5px; } }
+  .section-aboutus .aboutus__message {
+    margin-top: 160px;
+    text-align: center;
+    font-weight: bold;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section-aboutus .aboutus__message {
+        margin-top: 75px; } }
+    .section-aboutus .aboutus__message .aboutus__message__title {
+      font-size: 35px;
+      line-height: 45px;
+      margin-bottom: 50px;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .section-aboutus .aboutus__message .aboutus__message__title {
+          margin-bottom: 27px;
+          font-size: 20px;
+          line-height: 22.5px; } }
+      .section-aboutus .aboutus__message .aboutus__message__title .underline {
+        display: inline-block;
+        line-height: 1.5;
+        box-shadow: inset 0px -2px 0px #000; }
+    .section-aboutus .aboutus__message .aboutus__message__desc {
+      display: inline-block; }
+
+.section__cv {
+  padding-top: 200px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .section__cv {
+      padding-top: 96px; } }
+  .section__cv .cv__flex-container {
+    display: flex;
+    padding-left: 115px;
+    padding-right: 115px;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section__cv .cv__flex-container {
+        display: block;
+        padding-left: 18px;
+        padding-right: 18px; } }
+    .section__cv .cv__flex-container .cv__left {
+      order: 1;
+      flex: 0 0 400px;
+      width: 400px;
+      margin-right: 48px;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .section__cv .cv__flex-container .cv__left {
+          margin-right: 0;
+          width: auto; } }
+    .section__cv .cv__flex-container .cv__right {
+      flex: 1 1 auto;
+      order: 2; }
+    .section__cv .cv__flex-container .cv__title {
+      margin-top: -18px;
+      margin-bottom: 28px;
+      white-space: nowrap;
+      font-size: 35.8px;
+      line-height: 52px;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .section__cv .cv__flex-container .cv__title {
+          margin-top: 18px;
+          font-size: 21.6px;
+          line-height: 34.5px;
+          text-align: center; } }
+      .section__cv .cv__flex-container .cv__title .underline {
+        display: inline-block;
+        margin-top: 2px;
+        line-height: 28px;
+        box-shadow: inset 0px -2px 0px #000; }
+    .section__cv .cv__flex-container .cv__visual {
+      position: relative;
+      width: 100%; }
+      .section__cv .cv__flex-container .cv__visual img {
+        width: 100%; }
+      .section__cv .cv__flex-container .cv__visual .cv__visual__bagde {
+        position: absolute;
+        top: -12.8%;
+        right: -17.54%;
+        width: 47.36%;
+        /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+        @media screen and (max-width: 768px) {
+          .section__cv .cv__flex-container .cv__visual .cv__visual__bagde {
+            width: 45.454545%;
+            top: -12%;
+            right: -10.6%; } }
+    .section__cv .cv__flex-container .cv__product-info {
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 768px) {
+        .section__cv .cv__flex-container .cv__product-info {
+          padding-left: 18px;
+          padding-right: 18px; } }

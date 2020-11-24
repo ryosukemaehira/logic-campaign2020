@@ -1,0 +1,37 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryosukemaehira/mooncastle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "browser-sync": "^2.26.7",
+    "gulp-file-include": "^2.1.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-inject-partials": "^1.0.3",
+    "gulp-load-plugins": "^2.0.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-scss": "^1.4.0"
+  },
+  "dependencies": {
+    "gulp-tinypng-compress": "^1.2.5",
+    "lodash": "^4.17.15",
+    "minimatch": "^3.0.4",
+    "open": "^7.0.0"
+  },
+  "name": "mooncastle",
+  "bugs": {
+    "url": "https://github.com/ryosukemaehira/mooncastle/issues"
+  },
+  "homepage": "https://github.com/ryosukemaehira/mooncastle#readme",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "description": ""
+}

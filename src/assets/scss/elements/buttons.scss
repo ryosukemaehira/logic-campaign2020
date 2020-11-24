@@ -1,0 +1,28 @@
+button {
+  // reset default style for buttons
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 100%;
+}
+
+.ele-button-medium {
+  display: inline-block;
+  height: 72px;
+  width: 100%;
+  background-color: #000;
+  font-weight: bold;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  
+  @include mq-down(sm) {
+    height: 64px;
+  }
+
+}

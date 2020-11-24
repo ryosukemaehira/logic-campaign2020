@@ -1,0 +1,179 @@
+*, *:before, *:after {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+$map-breakpoint-up: (
+  'xs': 'screen and (min-width: #{$breakpoint-xs-up})',
+  'sm': 'screen and (min-width: #{$breakpoint-sm-up})',
+  'md': 'screen and (min-width: #{$breakpoint-md-up})',
+  'lg': 'screen and (min-width: #{$breakpoint-lg-up})',
+  'xl': 'screen and (min-width: #{$breakpoint-xl-up})',
+  ) !default;
+
+$map-breakpoint-down: (
+  'xs': 'screen and (max-width: #{$contents-width-xs})',
+  'sm': 'screen and (max-width: #{$contents-width-sm})',
+  'md': 'screen and (max-width: #{$contents-width-md})',
+  'lg': 'screen and (max-width: #{$contents-width-lg})',
+  'xl': 'screen and (max-width: #{$contents-width-xl})',
+  ) !default;
+
+@mixin mq-up($breakpoint: md) {
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  @media #{map-get($map-breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  @media #{map-get($map-breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+.l-wrapper {
+  overflow: hidden;
+}
+
+.l-container {
+  margin: 0 auto;
+  position: relative;
+  padding-left: 90px;
+  padding-right: 90px;
+
+  &.is-lg-width {
+    max-width: $contents-width-lg;
+  }
+
+  &.is-md-width {
+    max-width: $contents-width-md;
+  }
+
+  &.is-sm-width {
+    max-width: $contents-width-sm;
+  }
+  
+  &.is-xs-width {
+    max-width: $contents-width-xs;
+  }
+
+  @include mq-down(xs) {
+    width: 100%;
+  }
+
+  @include mq-down(sm) {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include mq-up(xs) {
+    // width: $contents-width-xs;
+    width: 100%;
+  }
+
+  @include mq-up(sm) {
+    // width: $contents-width-sm;
+  }
+
+  @include mq-up(md) {
+    // width: $contents-width-md;
+  }
+
+  @include mq-up(lg) {
+    // width: $contents-width-lg;
+  }
+
+  @include mq-up(xl) {
+    width: $contents-width-xl;
+  }
+
+  &.has-padding {
+    padding: 0 $container-padding;
+
+    @include mq-down(sm) {
+      padding: 0 $container-padding-sp;
+    }
+  }
+}
+
+.l-liquid-container {
+  width: 100%;
+  position: relative;
+  padding-left: 84px;
+  padding-right: 84px;
+  
+  @include mq-down(md) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.l-flex-box {
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
+  display: flex;
+  
+  &.is-direction-column {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  &.is-align-center {
+    align-items: center;
+  }
+  &.is-align-start {
+    align-items: flex-start;
+  }
+
+  &.is-flex-wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+
+  &.is-justify-center {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  &.is-justify-space-between {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  &.l-block-sm {
+    @include mq-down(sm) {
+      display: block;
+    }
+  }
+}
+
+
+.show-sm {
+  display: none!important;
+}
+
+.hide-sm {
+  display: block!important;
+}
+
+@include mq-down(sm) {
+  .show-sm {
+    display: block!important;
+  }
+  .hide-sm {
+    display: none!important;
+  }
+}
+
+.u-relative {
+  position: relative;
+}
