@@ -3,13 +3,13 @@
 var scrollAnimationTarget = document.querySelectorAll('.js-animation-parent')
 var scrollAnimationTargetTop = document.querySelectorAll('.js-animation-parent--top-section')
 
-document.addEventListener('onload', (event) => {
+window.onload = function() {
   Array.prototype.map.call(scrollAnimationTargetTop, function(ele) {
     if (checkView(ele)) {
       ele.classList.add('js-animation-fire');
     }
   });
-});
+};
 
 
 document.addEventListener('scroll', function(){
