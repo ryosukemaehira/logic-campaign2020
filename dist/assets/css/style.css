@@ -327,7 +327,7 @@ input:focus {
     /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
     @media screen and (max-width: 768px) {
       .header .header__logo {
-        width: 187px; } }
+        width: calc(187/375*100vw); } }
     .header .header__logo img {
       width: 100%; }
 
@@ -481,10 +481,10 @@ input:focus {
     transform: scaleX(0); }
 
 .animation--delay-01 {
-  transition-delay: 0.8s; }
+  transition-delay: 0.8s !important; }
 
 .animation--delay-02 {
-  transition-delay: 1.2s; }
+  transition-delay: 1.2s !important; }
 
 .animation--slidein {
   position: relative; }
@@ -655,12 +655,20 @@ body {
 .info__product {
   position: relative; }
 
+.flex-container {
+  display: flex;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .flex-container {
+      display: block; } }
+
 .info__product__text-container {
-  position: absolute;
-  left: 0;
-  top: 0;
+  order: 1;
+  z-index: 1;
   width: 100%;
   padding-left: 70px;
+  margin-right: -1000px;
+  height: 614px;
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
   @media screen and (max-width: 1280px) {
@@ -735,6 +743,7 @@ body {
       width: auto; } }
 
 .info__product__visual {
+  order: 2;
   position: relative;
   width: calc(100vw - 690px);
   max-width: 750px;
@@ -770,16 +779,18 @@ body {
     .info__product__bottom-text-animation-content-width {
       width: calc(100vw - 64px); } }
 
+.info__product__bottom-text-container {
+  margin-top: -45px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 1280px) {
+    .info__product__bottom-text-container {
+      margin-top: 40px; } }
+
 .info__product__bottom-text {
   position: relative;
   text-align: center;
   font-weight: bold;
-  margin-top: -2.2em;
-  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
-  @media screen and (max-width: 1280px) {
-    .info__product__bottom-text {
-      margin-top: 60px; } }
 
 .section-about {
   margin-top: 300px;

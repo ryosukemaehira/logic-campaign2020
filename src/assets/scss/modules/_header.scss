@@ -10,7 +10,7 @@
   .header__logo {
     width: 415px;
     @include mq-down(sm) {
-      width: 187px;
+      width: calc(187/375*100vw);
     }
     img {
       width: 100%;
