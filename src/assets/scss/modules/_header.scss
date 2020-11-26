@@ -8,13 +8,12 @@
   }
 
   .header__logo {
-    width: 395px;
+    width: 415px;
     @include mq-down(sm) {
-      width: 179px;
+      width: 187px;
     }
     img {
       width: 100%;
     }
   }
-
 }

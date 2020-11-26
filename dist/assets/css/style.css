@@ -323,11 +323,11 @@ input:focus {
     .header {
       height: 77px; } }
   .header .header__logo {
-    width: 395px;
+    width: 415px;
     /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
     @media screen and (max-width: 768px) {
       .header .header__logo {
-        width: 179px; } }
+        width: 187px; } }
     .header .header__logo img {
       width: 100%; }
 
