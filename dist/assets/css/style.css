@@ -377,7 +377,8 @@ input:focus {
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
   @media screen and (max-width: 768px) {
     .c-product-info__period {
-      font-size: 1.785rem; } }
+      font-size: 1.72rem;
+      letter-spacing: 0.005em; } }
 
 .c-product-info__price {
   line-height: 1;
@@ -653,7 +654,8 @@ body {
     @media screen and (max-width: 768px) {
       .info__title .info__title__en {
         font-size: 2.75rem;
-        line-height: 35px; } }
+        line-height: 35px;
+        white-space: nowrap; } }
     .info__title .info__title__en .underline {
       display: inline;
       padding-bottom: 0;
@@ -860,7 +862,8 @@ body {
           .section-koganeyu .koganeyu__content .koganeyu__text h2 {
             font-size: 1.4rem;
             text-align: center;
-            letter-spacing: 0; } }
+            letter-spacing: 0;
+            white-space: nowrap; } }
       .section-koganeyu .koganeyu__content .koganeyu__text p {
         margin-top: 8px;
         margin-bottom: 30px;

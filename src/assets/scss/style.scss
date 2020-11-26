@@ -161,6 +161,7 @@ body {
     @include mq-down(sm) {
       font-size: 2.75rem;
       line-height: 35px;
+      white-space: nowrap;
     }
     .underline {
       display: inline;
@@ -379,6 +380,7 @@ body {
           font-size: 1.4rem;
           text-align: center;
           letter-spacing: 0;
+          white-space: nowrap;
         }
       }
       p {
