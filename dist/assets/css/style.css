@@ -463,16 +463,16 @@ input:focus {
     background-color: #fff;
     transition-duration: 0.2s; }
 
-.animation--box-slidein {
+.animation--box-slidein, .animation--box-slidein--delay {
   position: relative; }
-  .animation--box-slidein:before {
+  .animation--box-slidein:before, .animation--box-slidein--delay:before {
     content: '';
     display: block;
     position: absolute;
     top: 0;
-    right: -10%;
+    right: -8%;
     bottom: 0;
-    left: -10%;
+    left: -8%;
     z-index: 2;
     background-color: #f9f0e8;
     -webkit-transform: scaleX(1);
@@ -485,9 +485,12 @@ input:focus {
     transition-property: transform;
     transition-property: transform,-webkit-transform;
     transition-delay: 0.4s; }
-  .animation--box-slidein.js-animation-fire:before {
+  .animation--box-slidein.js-animation-fire:before, .js-animation-fire.animation--box-slidein--delay:before {
     -webkit-transform: scaleX(0);
     transform: scaleX(0); }
+
+.animation--box-slidein--delay {
+  transition-delay: 0.8s !important; }
 
 .animation--delay-01 {
   transition-delay: 0.8s !important; }
@@ -831,7 +834,7 @@ body {
       margin-right: 48px;
       padding-left: 70px;
       /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
-      @media screen and (max-width: 1280px) {
+      @media screen and (max-width: 768px) {
         .section-koganeyu .koganeyu__content .koganeyu__visual {
           padding-left: 0;
           margin-right: 0; } }
@@ -839,7 +842,7 @@ body {
         width: 100%; }
     .section-koganeyu .koganeyu__content .koganeyu__text {
       flex: 1 1 50%;
-      margin-top: 16px; }
+      margin-top: 10px; }
       .section-koganeyu .koganeyu__content .koganeyu__text h2 {
         font-size: 2.4rem;
         font-weight: bold;

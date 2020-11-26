@@ -360,7 +360,7 @@ body {
       flex: 1 1 50%;
       margin-right: 48px;
       padding-left: 70px;
-      @include mq-down(lg) {
+      @include mq-down(sm) {
         padding-left: 0;
         margin-right: 0;
       }
@@ -371,7 +371,7 @@ body {
     
     .koganeyu__text {
       flex: 1 1 50%;
-      margin-top: 16px;
+      margin-top: 10px;
       h2 {
         font-size: 2.4rem;
         font-weight: bold;
