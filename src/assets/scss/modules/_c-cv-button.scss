@@ -10,6 +10,7 @@
   border-radius: 10px;
   font-size: 3.8rem;
   letter-spacing: 0.08em;
+  transition-duration: 0.2s;
   @include mq-down(sm) {
     margin-top: 35px;
     height: 75px;
@@ -19,5 +20,10 @@
   a {
     text-decoration: none;
     font-weight: bold;
+  }
+  &:hover {
+    color: #000;
+    background-color: #fff;
+    transition-duration: 0.2s;
   }
 }
