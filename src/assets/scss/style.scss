@@ -389,7 +389,7 @@ body {
       }
     }
     h3 {
-      font-size: 1.4rem;
+      font-size: 3.5rem;
       margin-bottom: 1em;
       @include mq-down(sm) {
         font-size: 1.2rem;
@@ -627,10 +627,13 @@ body {
         text-align: center;
       }
       .underline {
-        display: inline-block;
-        margin-top: 2px;
-        line-height: 28px;
-        box-shadow: inset 0px -2px 0px #000;
+        // display: inline-block;
+        // margin-top: 2px;
+        // line-height: 28px;
+        // box-shadow: inset 0px -2px 0px #000;
+        background:linear-gradient($logic-beige 95%, #000 0%);
+        padding-bottom: 2px;
+        display: inline;
       }
     }
 

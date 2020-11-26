@@ -854,7 +854,7 @@ body {
           font-size: 1.3rem;
           margin-top: 20px; } }
     .section-about .about__box__text h3 {
-      font-size: 1.4rem;
+      font-size: 3.5rem;
       margin-bottom: 1em;
       /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
       @media screen and (max-width: 768px) {
@@ -1064,10 +1064,9 @@ body {
           line-height: 34.5px;
           text-align: center; } }
       .section__cv .cv__flex-container .cv__title .underline {
-        display: inline-block;
-        margin-top: 2px;
-        line-height: 28px;
-        box-shadow: inset 0px -2px 0px #000; }
+        background: linear-gradient(#f9f0e8 95%, #000 0%);
+        padding-bottom: 2px;
+        display: inline; }
     .section__cv .cv__flex-container .cv__visual {
       position: relative;
       width: 100%; }
