@@ -334,7 +334,11 @@ input:focus {
 .footer {
   padding-top: 175px;
   padding-bottom: 55px;
-  text-align: center; }
+  text-align: center;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .footer {
+      padding-top: 60px; } }
   .footer .footer__logic-link {
     width: 448px;
     height: 86px;
@@ -353,12 +357,17 @@ input:focus {
       .footer .footer__logic-link {
         width: 100%;
         height: 60px;
-        font-size: 17.5px; } }
+        font-size: 17.5px;
+        margin-bottom: 70px; } }
     .footer .footer__logic-link:hover {
       color: #fff;
       background-color: #000; }
   .footer .footer__copyright {
-    font-size: 14px; }
+    font-size: 14px;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .footer .footer__copyright {
+        font-size: 10px; } }
 
 .c-product-info__period {
   font-size: 2.9rem;

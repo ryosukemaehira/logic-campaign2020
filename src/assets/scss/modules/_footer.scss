@@ -2,6 +2,9 @@
   padding-top: 175px;
   padding-bottom: 55px;
   text-align: center;
+  @include mq-down(sm) {
+    padding-top: 60px;
+  }
 
   .footer__logic-link {
     width: 448px;
@@ -20,6 +23,7 @@
       width: 100%;
       height: 60px;
       font-size: 17.5px;
+      margin-bottom: 70px;
     }
     &:hover {
       color: #fff;
@@ -29,5 +33,8 @@
 
   .footer__copyright {
     font-size: 14px;
+    @include mq-down(sm) {
+      font-size: 10px;
+    }
   }
 }
