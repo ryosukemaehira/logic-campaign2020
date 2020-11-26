@@ -329,16 +329,88 @@ body {
   }
 }
 
-.section-about {
-  margin-top: 300px;
-  @include mq-down(lg) {
-    margin-top: 260px;
+
+.section-koganeyu {
+  padding-top: 250px;
+  @include mq-down(sm) {
+    padding-top: 200px;
   }
+  .koganeyu__title {
+    text-align: center;
+    font-size: 3.5rem;
+    @include mq-down(sm) {
+      font-size: 2rem;
+    }
+    .underline {
+      background:linear-gradient($logic-beige 95%, #000 0%);
+      padding-bottom: 6px;
+      display: inline;
+    }
+  }
+
+  .koganeyu__content {
+    margin-top: 58px;
+    display: flex;
+    @include mq-down(sm) {
+      display: block;
+      margin-top: 24px;
+    }
+
+    .koganeyu__visual {
+      flex: 1 1 50%;
+      margin-right: 48px;
+      padding-left: 70px;
+      @include mq-down(lg) {
+        padding-left: 0;
+        margin-right: 0;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    
+    .koganeyu__text {
+      flex: 1 1 50%;
+      margin-top: 16px;
+      h2 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        @include mq-down(sm) {
+          font-size: 1.4rem;
+          text-align: center;
+          letter-spacing: 0;
+        }
+      }
+      p {
+        margin-top: 8px;
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        &.small {
+          font-size: 1.4rem;
+          font-weight: normal;
+          @include mq-down(sm) {
+            font-size: 1rem;
+          }
+        }
+        @include mq-down(sm) {
+          font-size: 1.2rem;
+          letter-spacing: 0;
+          text-align: justify;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.section-about {
+  margin-top: 90px;
   @include mq-down(sm) {
     margin-top: 64px;
   }
   @include mq-down(sm) {
-    margin-top: 240px;
+    margin-top: 50px;
   }
   .about__title {
     font-size: 6.0rem;

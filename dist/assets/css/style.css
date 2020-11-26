@@ -801,20 +801,84 @@ body {
   font-weight: bold;
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
 
+.section-koganeyu {
+  padding-top: 250px;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  @media screen and (max-width: 768px) {
+    .section-koganeyu {
+      padding-top: 200px; } }
+  .section-koganeyu .koganeyu__title {
+    text-align: center;
+    font-size: 3.5rem;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section-koganeyu .koganeyu__title {
+        font-size: 2rem; } }
+    .section-koganeyu .koganeyu__title .underline {
+      background: linear-gradient(#f9f0e8 95%, #000 0%);
+      padding-bottom: 6px;
+      display: inline; }
+  .section-koganeyu .koganeyu__content {
+    margin-top: 58px;
+    display: flex;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .section-koganeyu .koganeyu__content {
+        display: block;
+        margin-top: 24px; } }
+    .section-koganeyu .koganeyu__content .koganeyu__visual {
+      flex: 1 1 50%;
+      margin-right: 48px;
+      padding-left: 70px;
+      /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+      @media screen and (max-width: 1280px) {
+        .section-koganeyu .koganeyu__content .koganeyu__visual {
+          padding-left: 0;
+          margin-right: 0; } }
+      .section-koganeyu .koganeyu__content .koganeyu__visual img {
+        width: 100%; }
+    .section-koganeyu .koganeyu__content .koganeyu__text {
+      flex: 1 1 50%;
+      margin-top: 16px; }
+      .section-koganeyu .koganeyu__content .koganeyu__text h2 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+        @media screen and (max-width: 768px) {
+          .section-koganeyu .koganeyu__content .koganeyu__text h2 {
+            font-size: 1.4rem;
+            text-align: center;
+            letter-spacing: 0; } }
+      .section-koganeyu .koganeyu__content .koganeyu__text p {
+        margin-top: 8px;
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+        .section-koganeyu .koganeyu__content .koganeyu__text p.small {
+          font-size: 1.4rem;
+          font-weight: normal;
+          /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+          @media screen and (max-width: 768px) {
+            .section-koganeyu .koganeyu__content .koganeyu__text p.small {
+              font-size: 1rem; } }
+        @media screen and (max-width: 768px) {
+          .section-koganeyu .koganeyu__content .koganeyu__text p {
+            font-size: 1.2rem;
+            letter-spacing: 0;
+            text-align: justify;
+            margin-bottom: 20px; } }
+
 .section-about {
-  margin-top: 300px;
-  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  margin-top: 90px;
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
-  @media screen and (max-width: 1280px) {
-    .section-about {
-      margin-top: 260px; } }
   @media screen and (max-width: 768px) {
     .section-about {
       margin-top: 64px; } }
   @media screen and (max-width: 768px) {
     .section-about {
-      margin-top: 240px; } }
+      margin-top: 50px; } }
   .section-about .about__title {
     font-size: 6.0rem;
     line-height: 90px;
