@@ -569,8 +569,7 @@ body {
         left: -22px;
         width: auto;
         top: 50%;
-        bottom: calc(100vw - 20px);
-        transform: translateY(-50%); } }
+        margin-top: -18%; } }
     .section-hero .hero__content .hero__content__title .hero__content__title__image {
       width: 71.66vw;
       /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
