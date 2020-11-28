@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 
+
+
 $map-breakpoint-up: (
   'xs': 'screen and (min-width: #{$breakpoint-xs-up})',
   'sm': 'screen and (min-width: #{$breakpoint-sm-up})',
@@ -37,6 +39,7 @@ $map-breakpoint-down: (
 
 .l-wrapper {
   overflow: hidden;
+  width: 100vw;
 }
 
 .l-container {

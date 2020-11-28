@@ -69,7 +69,8 @@ body::-webkit-scrollbar {
   box-sizing: border-box; }
 
 .l-wrapper {
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100vw; }
 
 .l-container {
   margin: 0 auto;
