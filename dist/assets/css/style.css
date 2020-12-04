@@ -449,26 +449,27 @@ input:focus {
 .c-cv-button {
   margin-top: 45px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 86px;
-  color: #fff;
-  background-color: #000;
-  border-radius: 10px;
-  font-size: 3.8rem;
-  letter-spacing: 0.08em;
-  transition-duration: 0.2s;
-  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
-  @media screen and (max-width: 768px) {
-    .c-cv-button {
-      margin-top: 35px;
-      height: 75px;
-      font-size: 2.5rem;
-      border-radius: 5px; } }
+  height: 86px; }
   .c-cv-button a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border-radius: 10px;
+    font-size: 3.8rem;
+    letter-spacing: 0.08em;
+    transition-duration: 0.2s;
     text-decoration: none;
-    font-weight: bold; }
+    font-weight: bold;
+    color: #fff;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    @media screen and (max-width: 768px) {
+      .c-cv-button a {
+        margin-top: 35px;
+        height: 75px;
+        font-size: 2.5rem;
+        border-radius: 5px; } }
   .c-cv-button:hover {
     color: #000;
     background-color: #fff;
