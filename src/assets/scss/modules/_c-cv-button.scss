@@ -2,7 +2,7 @@
   margin-top: 45px;
   width: 100%;
   height: 86px;
-  a {
+  .c-cv-button__button {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -26,5 +26,10 @@
     color: #000;
     background-color: #fff;
     transition-duration: 0.2s;
+  }
+
+  .is-disabled {
+    background-color: #BBB3AB;
+    color: #fff;
   }
 }
