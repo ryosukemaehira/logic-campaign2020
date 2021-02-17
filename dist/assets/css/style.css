@@ -470,13 +470,21 @@ input:focus {
         height: 75px;
         font-size: 2.5rem;
         border-radius: 5px; } }
-  .c-cv-button:hover {
-    color: #000;
-    background-color: #fff;
-    transition-duration: 0.2s; }
+    .c-cv-button .c-cv-button__button:hover {
+      color: #000;
+      background-color: #fff;
+      transition-duration: 0.2s; }
   .c-cv-button .is-disabled {
     background-color: #BBB3AB;
-    color: #fff; }
+    color: #fff;
+    font-size: 3.2rem;
+    /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+    .c-cv-button .is-disabled:hover {
+      background-color: #BBB3AB;
+      color: #fff; }
+    @media screen and (max-width: 768px) {
+      .c-cv-button .is-disabled {
+        font-size: 2.1rem; } }
 
 .animation--box-slidein, .animation--box-slidein--delay {
   position: relative; }

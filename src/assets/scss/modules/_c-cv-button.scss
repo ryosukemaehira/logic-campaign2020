@@ -21,15 +21,23 @@
       font-size: 2.5rem;
       border-radius: 5px;
     }
-  }
-  &:hover {
-    color: #000;
-    background-color: #fff;
-    transition-duration: 0.2s;
+    &:hover {
+      color: #000;
+      background-color: #fff;
+      transition-duration: 0.2s;
+    }
   }
 
   .is-disabled {
     background-color: #BBB3AB;
     color: #fff;
+    font-size: 3.2rem;
+    &:hover {
+      background-color: #BBB3AB;
+      color: #fff;
+    }
+    @include mq-down(sm) {
+      font-size: 2.1rem;
+    }
   }
 }
